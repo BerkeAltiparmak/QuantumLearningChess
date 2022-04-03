@@ -1,2 +1,9 @@
 # QuantumLearningChess
-a chess engine that learns through brand-new Quanvolutional Neural Networks
+A chess engine that learns through brand-new Quanvolutional Neural Networks.
+
+Quantum machine learning is a recent field that combines quantum computing and machine learning, and this was my first (and big) step into this new ground-breaking field. The idea of this project is to train a Quanvolutional Neural Network (https://pennylane.ai/qml/glossary/qcnn.html) by feeding it with chess puzzles. First, I created a chess engine that is able to run a valid chess game (it calculates all valid moves, registers new moves and ensures they are valid, and keep track of moves so that a legit chess game is played). Then, I accessed over a million of chess puzzles through the open source online chess website, Lichess (https://database.lichess.org/#puzzles). I had a creative way of approaching this project: I treated the chess board as an 8x8 pixel image, where each pixel is one-hot encoding of the pieces or the empty squares (for example, a white queen is (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) whereas a black rook is (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0). This way, we could treat it like a RGB image, but instead of 3 channels it had 12. Then, I attempted to do carry out a CNN model that handled RGB images; however, QNN is something that I have discovered recently, so I was not able to create a model with 12 channels. Thus, I created one with 1 channel, but the resulting model was not the most accurate one. Here is a screenshot of the accuracy report of the model that I built using QNN and CNN:
+
+<img width="351" alt="Screen Shot 2022-04-03 at 06 02 58" src="https://user-images.githubusercontent.com/96665962/161430239-7d3f21fb-237f-48fe-a601-bcc23afeac3d.png">
+
+@TODO: create a QNN with 12 channels.
+Question to think about: although quantum layer resulted in a lower loss performance, it wasn't better at accuracy compared to the model without the quantum layer.
