@@ -6,4 +6,5 @@ Quantum machine learning is a recent field that combines quantum computing and m
 <img width="351" alt="Screen Shot 2022-04-03 at 06 02 58" src="https://user-images.githubusercontent.com/96665962/161430239-7d3f21fb-237f-48fe-a601-bcc23afeac3d.png">
 
 @TODO: create a QNN with 12 channels.
+
 Question to think about: although quantum layer resulted in a lower loss performance, it wasn't better at accuracy compared to the model without the quantum layer.
